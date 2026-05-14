@@ -1,4 +1,10 @@
-﻿body {
+﻿*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -245,6 +251,16 @@ button.active {
     padding: 18px;
   }
 
+  .top-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .top-nav a {
+    width: 100%;
+    padding: 14px 16px;
+  }
+
   .categories {
     grid-template-columns: 1fr;
   }
@@ -255,10 +271,12 @@ button.active {
 
   .label-buttons {
     flex-direction: column;
+    gap: 12px;
   }
 
   .label-buttons button {
     width: 100%;
+    min-height: 48px;
   }
 
   .label-stats {
@@ -284,8 +302,12 @@ button.active {
     font-size: 16px;
   }
 
+  .top-nav a {
+    font-size: 14px;
+  }
+
   button {
-    padding: 12px 0;
+    padding: 14px 0;
   }
 }
 
